@@ -32,3 +32,27 @@ instaluje bez kliknięcia.
 Adres najnowszej wersji jest stały:
 `https://github.com/AtmatiAdi/spectrenotes-releases/releases/latest/download/<plik>`.
 Przechowywane są trzy ostatnie wydania.
+
+## Antywirus zablokował aplikację
+
+Zdarza się, że Microsoft Defender zgłosi świeże wydanie jako zagrożenie
+z sufiksem `!ml` (np. `Trojan:Win32/Barefoos.A!ml`). To werdykt modelu uczenia
+maszynowego, nie dopasowanie sygnatury: niepodpisana binarka bez reputacji,
+która przy pierwszym uruchomieniu dopisuje się do autostartu, chowa się do traya
+i potrafi pobrać nową wersję siebie. Każda z tych rzeczy jest tu funkcją,
+ale razem wyglądają dla modelu jak wzorzec.
+
+Co zrobić:
+
+1. *Ochrona przed wirusami i zagrożeniami → Historia ochrony* → **Przywróć** plik.
+2. Sprawdź jego sumę SHA-256 z `SHA256SUMS.txt` z tego samego wydania —
+   to potwierdza, że masz dokładnie plik z wydania.
+3. Zgłoś fałszywy alarm Microsoftowi:
+   <https://www.microsoft.com/en-us/wdsi/filesubmission> (kategoria *Software
+   developer*, „Incorrectly detected as malware"). Werdykt wraca zwykle w kilka
+   godzin, aktualizacją sygnatur dla wszystkich.
+
+Każde wydanie jest przed publikacją skanowane Defenderem, a aktualizacje
+w aplikacji są sprawdzane sumą SHA-256 z tego samego wydania, zanim cokolwiek
+zostanie podmienione. Nie dodawaj wykluczeń antywirusa dla katalogu aplikacji —
+to właśnie ten katalog ma być skanowany.
