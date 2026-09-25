@@ -1,7 +1,19 @@
 # SpectreNotes — wydania
 
 Tu są tylko gotowe binarki SpectreNotes (notatki piórem na Windows, Rust + Direct2D).
-Źródła są w osobnym repozytorium.
+**Źródła:** <https://github.com/AtmatiAdi/spectrenotes> (GPL-3.0-or-later).
+
+> **In English.** SpectreNotes is a pen-first note-taking application for Windows,
+> built for AMOLED screens and MPP 2.0 styluses — a self-hosted replacement for
+> Samsung Notes. Written in Rust on Win32 + Direct2D, with no GUI framework.
+> Notes are plain files on disk (an append-only CRDT op-log); optional syncing
+> goes through a Git repository you own — no third-party cloud, no telemetry.
+> The application's interface is in English; its documentation is in Polish.
+> Download **SpectreNotes-Setup.exe** below: it installs per-user, needs no
+> administrator rights, and can be removed from *Installed apps* (or with
+> `spectrenotes.exe --uninstall`). Every release ships `SHA256SUMS.txt`, and the
+> in-app updater verifies those sums before replacing anything.
+> Source code: <https://github.com/AtmatiAdi/spectrenotes> (GPL-3.0-or-later).
 
 ## Instalacja
 
