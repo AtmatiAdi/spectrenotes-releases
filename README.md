@@ -68,3 +68,18 @@ Każde wydanie jest przed publikacją skanowane Defenderem, a aktualizacje
 w aplikacji są sprawdzane sumą SHA-256 z tego samego wydania, zanim cokolwiek
 zostanie podmienione. Nie dodawaj wykluczeń antywirusa dla katalogu aplikacji —
 to właśnie ten katalog ma być skanowany.
+## Podpisywanie kodu
+
+Podpisy wydań zapewnia **[SignPath Foundation](https://signpath.org/)** — darmowe
+podpisywanie kodu dla projektów open source. Usługę podpisującą dostarcza
+[SignPath.io](https://signpath.io/), certyfikat wystawia SignPath Foundation.
+
+> Free code signing provided by [SignPath.io](https://signpath.io/), certificate
+> by [SignPath Foundation](https://signpath.org/).
+
+**Stan na dziś: wniosek jest w trakcie rozpatrywania** — dopóki nie zostanie przyjęty, pliki wydań
+są **niepodpisane** i Windows SmartScreen pokaże ostrzeżenie (patrz wyżej).
+Niezależnie od podpisu każde wydanie ma `SHA256SUMS.txt`, a aktualizacje
+w aplikacji są sprawdzane tą sumą, zanim cokolwiek zostanie podmienione.
+
+Polityka prywatności: <https://github.com/AtmatiAdi/spectrenotes/blob/main/PRIVACY.md>
